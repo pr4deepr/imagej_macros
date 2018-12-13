@@ -18,3 +18,24 @@ select the last ROI, Click OK
 Enter the text, i.e., for Glia_1, just enter Glia, Click OK
 It automatically renames all the cells within the selection range.
 You can modify this by adding an extra for loop based on the celltypes that need to be labelled.
+
+## _alignment_SIFT_liff.ijm
+
+This macro reads in a folder containing liff (Acquired from Leica microscope) files and implements the "Linear Stack Alignment with SIFT" plugin. It is meant to be used on timeseries data, so will only work on files within the liff with atleast more than 10 frames
+Its runs it in batch mode and saves the file as file name+series name_aligned.tiff.
+For Linear Stack Alignment with SIFT, it uses the parameters:
+* initial_gaussian_blur=1.60
+* steps_per_scale_octave=3
+* minimum_image_size=64
+* maximum_image_size=1024
+* feature_descriptor_size=4
+* feature_descriptor_orientation_bins=8
+* closest/next_closest_ratio=0.92
+* maximal_alignment_error=25
+* inlier_ratio=0.05
+* expected_transformation=Affine
+
+The parameters can be changed in the align_sift() function.
+
+Note: if more than one channel per tiff file, it will only run alignment on the first channel. I have implemented some code in Python, where it run the SIFT alignment on one channel, extract the parameters and apply this to the second channel. 
+
