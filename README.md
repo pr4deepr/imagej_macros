@@ -21,9 +21,10 @@ You can modify this by adding an extra for loop based on the celltypes that need
 
 ## _alignment_SIFT_liff.ijm
 
-This macro reads in a folder containing liff (Acquired from Leica microscope) files and implements the "Linear Stack Alignment with SIFT" plugin. It is meant to be used on timeseries data, so will only work on files within the liff with atleast more than 10 frames
-Its runs it in batch mode and saves the file as file name+series name_aligned.tiff.
-For Linear Stack Alignment with SIFT, it uses the parameters:
+Image registration or alignment of stacks in a folder
+This macro reads in a folder containing liff files (Acquired from a Leica microscope) and implements the "Linear Stack Alignment with SIFT" plugin. It is meant to be used on timeseries data, so will only work on files (series) within the liff with greater than or equal to 10 frames. Its runs in batch mode and saves the file as file name+series name_aligned.tiff.
+
+For Linear Stack Alignment with SIFT, it uses the following parameters:
 * initial_gaussian_blur=1.60
 * steps_per_scale_octave=3
 * minimum_image_size=64
@@ -37,5 +38,5 @@ For Linear Stack Alignment with SIFT, it uses the parameters:
 
 The parameters can be changed in the align_sift() function.
 
-Note: if more than one channel per tiff file, it will only run alignment on the first channel. I have implemented some code in Python, where it run the SIFT alignment on one channel, extract the parameters and apply this to the second channel. 
+Note: If there is more than one channel per tiff file, it will only run the alignment on the first channel. I have implemented some code in Python, where it can run the SIFT alignment on one channel, extract the parameters and apply the transformation to the tiff stack of the second channel. Will upload it in the future..
 
