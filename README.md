@@ -2,6 +2,7 @@
   Collection of ImageJ macros that I have written or modified for my own purposes
   Many of these are inspired from stackoverflow, ImageJ forums and from other websites..
   This will be updated on the fly.
+  COPY these files into the plugins folder of FIJI (Fiji.app->plugins) and restart Imagej/FIJI
  
 ## Temporal color code_std_dev.ijm
  
