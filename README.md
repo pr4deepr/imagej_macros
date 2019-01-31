@@ -43,5 +43,5 @@ Note: If there is more than one channel per tiff file, it will only run the alig
 
 ## _alignment_SIFT_tiff.ijm
 Image registration or alignment of tiff files in a folder.
-Same as above, but can be used on a folder of tiff files. This macro saves it in a folder named "Aligned images" and also has a progress bar indicating the status of the analysis.
+Same as above, but can be used on a folder of tiff files. This macro saves the aligned images in a folder named "Aligned images" and also has a progress bar indicating the status of the analysis.
 
