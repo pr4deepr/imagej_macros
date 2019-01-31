@@ -40,3 +40,7 @@ The parameters can be changed in the align_sift() function.
 
 Note: If there is more than one channel per tiff file, it will only run the alignment on the first channel. I have implemented some code in Python, where it can run the SIFT alignment on one channel, extract the parameters and apply the transformation to the tiff stack of the second channel. Will upload it in the future..
 
+## _alignment_SIFT_tiff.ijm
+Image registration or alignment of tiff files in a folder.
+Same as above, but can be used on a folder of tiff files. This macro saves it in a folder named "Aligned images" and also has a progress bar indicating the status of the analysis.
+
