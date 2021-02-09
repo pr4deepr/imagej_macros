@@ -34,7 +34,7 @@ for (i=0; i<input_list.length; i++)
 			print("series count= "+seriesCount);
 			for (s=1; s<=seriesCount; s++) //need to set it to start from 1 as the bioformats importer only recognises from 1 onwards and not 0
 			{
-				run("Bio-Formats Importer", "open=["+path+"] color_mode=Default rois_import=[ROI manager] view=Hyperstack stack_order=XYCZT use_virtual_stack series_"+s);
+				run("Bio-Formats Importer", "open=["+path+"] color_mode=Default rois_import=[ROI manager] view=Hyperstack stack_order=XYCZT series_"+s);
 				name=getTitle();
 				print(name);
 				//setSeries will set a corresponding series within the liff file as active, so it can be accessed
